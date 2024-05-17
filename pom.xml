@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>it.eng.parer</groupId>
+    <artifactId>parer-test-suite</artifactId>
+    <version>0.0.3-SNAPSHOT</version>
+    <packaging>ejb</packaging>
+    <name>PaRER Test Suite</name>
+    <description>
+        Questo progetto nasce dall'esigenza di effettuare dei test sulle transazioni tra code, Xadisk e DB. 
+        Le prime versioni saranno focalizzate sull'applicazione Preingest.
+        Attualmente il progetto espone un ejb remoto ed utilizza vari ejb locali.
+        L'unica dipendenza esterna è XADisk che deve essere installato come resource adapter.
+        Questa versione, al momento, è pensata solo per Jboss EAP 6.4.        
+    </description>
+
+    <parent>
+        <groupId>it.eng.parer</groupId>
+        <artifactId>parer-pom</artifactId>
+        <version>4.0.0</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.encoding>UTF-8</project.encoding>
+        <!-- maven-compiler-plugin -->
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.bom.eap</groupId>
+                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
+                <version>6.4.0.GA</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <dependency>  
+            <groupId>org.jboss.spec</groupId>  
+            <artifactId>jboss-javaee-6.0</artifactId>  
+            <version>1.0.0.Final</version>  
+            <type>pom</type>  
+            <scope>provided</scope>  
+        </dependency>
+        <dependency>
+            <groupId>net.java.xadisk</groupId>
+            <artifactId>xadisk</artifactId>
+            <version>1.2.2.5</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <ejbVersion>3.1</ejbVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.1</version>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <scm>
+        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/tools/testsuite.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+</project>
