@@ -86,7 +86,7 @@
     </build>
     
     <scm>
-        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/tools/testsuite.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer-test-suite.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
