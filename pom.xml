@@ -3,7 +3,7 @@
 
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-test-suite</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <packaging>ejb</packaging>
     <name>PaRER Test Suite</name>
     <description>
@@ -87,7 +87,7 @@
     
     <scm>
         <developerConnection>scm:git:https://github.com/RegioneER/parer-test-suite.git</developerConnection>
-        <tag>parer-test-suite-0.0.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
 </project>
