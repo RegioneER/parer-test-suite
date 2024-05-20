@@ -5,7 +5,7 @@ Fonte template redazione documento:  https://www.makeareadme.com/.
 
 # Descrizione
 
-Il seguente progetto è utilizzato come **dipendenza** interna per ... TODO
+Il seguente progetto è utilizzato come **dipendenza** interna di PING (PreINGest) al fine di introdurre un livello di "astrazione" legato all'implementazione delle suite di test al suo interno.
 
 # Installazione
 
@@ -22,7 +22,7 @@ Come già specificato nel paragrafo precedente [Descrizione](# Descrizione) si t
 
 # Utilizzo
 
-TODO
+Come già specificato nella descrizione, attraverso questa libreria sono state definite un set di entità utilizzate come classi "utility" nella reealizzazione di test di unità all'interno del progetto PING (PreINGest), per ulterio dettagli e specifihe consultare i relativi Javadoc generati dal plugin [maven-javadoc-plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/).
 
 # Supporto
 
